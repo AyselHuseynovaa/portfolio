@@ -1,0 +1,948 @@
+// @import "variables";
+// @import "mixin";
+
+////////*****Navbar*****//////
+
+* {
+  scroll-behavior: smooth;
+}
+
+.app {
+  background: grey;
+}
+.navbar {
+  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  font-family: "Source Serif Pro", serif;
+  background-color: #c16afc;
+  // opacity: 0.7;
+  .navbar-brand {
+    letter-spacing: 1px;
+    font-size: 37px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Dancing Script", cursive;
+  }
+  .navbar-brand:hover {
+    color: #ffffff;
+  }
+  .nav-item {
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+    .nav-link {
+      letter-spacing: 1px;
+      color: white;
+      font-size: 20px;
+
+      .logo {
+        padding-bottom: 2.5px;
+        padding-right: 6px;
+        width: 20px;
+      }
+
+      transition: 0.1s ease-in-out;
+    }
+  }
+
+  .nav-link:hover {
+    transform: translateY(-5%);
+    color: #ffffff !important;
+  }
+}
+
+///* Home *///
+.home {
+// padding-top:5rem ;
+  .header-wraper {
+    position: relative;
+    background-image: url(../logo/IMG-4792.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    // top: 5rem;
+    .home-info {
+      position: absolute;
+      top: 0;
+      bottom: 100px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: right;
+      .home-title {
+        font-weight: 700;
+        color: #9907fa;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+    .typed-text {
+      // color: #faa307;
+      // color:#8d07e6;
+      color: black;
+      font-weight: 600;
+      font-size: 19px;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+////*****Tsparticles*****////
+.tsparticles-canvas-el {
+  position: absolute;
+  z-index: 1;
+  width: vw;
+  height: vh;
+}
+
+////////****ABOUT****////////
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+padding-top:5rem ;
+  
+
+  .about-title {
+    // margin-top: 2rem;
+    .title {
+      position: relative;
+      text-align: center;
+      padding-bottom: 23px;
+      color: black;
+    }
+    .title::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: black;
+      transform: translateX(-50%);
+    }
+    .title::after {
+      content: "Who am I";
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      font-size: 23px;
+      color: #9907fa;
+      padding: 5px;
+      background: #ffffff;
+      transform: translateX(-50%);
+    }
+  }
+  .row {
+    margin-top: 2rem;
+    .left-col {
+      .card {
+        margin-top: 4rem;
+        background-color: #3e0465;
+        opacity: 0.8;
+        color: white;
+
+        .card-body {
+          letter-spacing: 0.6px;
+          .btn {
+            background-color: #9907fa;
+            border: 2px solid #9907fa;
+            color: white;
+            font-weight: 600;
+          }
+          a:hover {
+            background: none;
+          }
+        }
+      }
+    }
+    .right-col {
+      .card {
+        background-image: url(../logo/257FC1C7-3F91-4090-9394-CD4764A2DF2D.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 78vh;
+        img {
+          height: 78vh;
+        }
+      }
+    }
+  }
+}
+
+//////****Skills****///////
+.skills {
+  padding-top:4.5rem ;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .skills-title {
+    margin-top: 2rem;
+    .title {
+      position: relative;
+      text-align: center;
+      padding-bottom: 23px;
+      color: black;
+    }
+    .title::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: black;
+      transform: translateX(-50%);
+    }
+    .title::after {
+      content: "What I Know";
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      font-size: 23px;
+      color: #9907fa;
+      padding: 5px;
+      background: #ffffff;
+      transform: translateX(-50%);
+    }
+  }
+  .skills-row {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    .skills-left-col {
+      .card {
+        margin-top: 2rem;
+
+        .card-body {
+          .card-title {
+            font-weight: 650;
+            letter-spacing: 1px;
+          }
+          .card-text {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .skills-right-col {
+      .bars {
+        margin-bottom: 6px;
+        .info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-size: 19px;
+            font-weight: 500;
+          }
+        }
+        .line {
+          height: 5px;
+          width: 100%;
+          background-color: lightgrey;
+          position: relative;
+        }
+        .line::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #9907fa;
+        }
+        .html::before {
+          width: 98%;
+        }
+        .css::before {
+          width: 98%;
+        }
+        .sass::before {
+          width: 95%;
+        }
+        .bootstrap::before {
+          width: 95%;
+        }
+        .js::before {
+          width: 85%;
+        }
+        .react::before {
+          width: 85%;
+        }
+        .redux::before {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+////////*Contact*/////////
+
+.contact {
+  padding-top:4.5rem ;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+
+  .contact-title {
+    margin-top: 1.5rem;
+    margin-bottom: 3.3rem;
+    .title {
+      position: relative;
+      text-align: center;
+      padding-bottom: 23px;
+      color: black;
+    }
+    .title::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: black;
+      transform: translateX(-50%);
+    }
+    .title::after {
+      content: "Get in Touch";
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      font-size: 23px;
+      color: #9907fa;
+      padding: 5px;
+      background: #ffffff;
+      transform: translateX(-50%);
+    }
+  }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    .contact-left-col {
+      color: black;
+      // .card{ /* For browsers that do not support gradients */
+      // background-image: linear-gradient(to right, #f2e1fa , #ffffff);
+      .contact-text {
+        padding-left: 50px;
+        .text {
+          font-weight: 600;
+        }
+      }
+      .contact-list {
+        ul {
+          text-decoration: none;
+          list-style: none;
+          li {
+            display: flex;
+            flex-direction: row;
+            img {
+              width: 30px;
+            }
+
+            .card-body {
+              span {
+                font-weight: 600;
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+
+      // .contact-right-col{
+
+      // }
+    }
+    .contact-right-col {
+      .form-title {
+        text-align: center;
+        color: black;
+      }
+      .contact-form {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .form-field {
+          border: none;
+          margin-bottom: 1.3rem;
+          border-bottom: 1px solid #9907fa !important;
+          padding: 7px;
+          text-indent: 20px;
+          background-color: white;
+          font-size: 17px;
+        }
+        .button {
+          border: none;
+          border-radius: 4px;
+          transition: ease-out 0.3s;
+          font-size: 18px;
+          background: #ffffff;
+          color: #60605e;
+          outline: none;
+          border: 1px solid #c16afc;
+          position: relative;
+          z-index: 1;
+          padding: 9px;
+        }
+        .button:hover {
+          color: #ffffff;
+          cursor: pointer;
+        }
+        .button:before {
+          position: absolute;
+          transition: 0.5s all ease;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          right: 50%;
+          content: "";
+          background-color: #c16afc;
+          opacity: 0;
+        }
+        .button:hover:before {
+          transition: 0.5s all ease;
+          left: 0;
+          right: 0;
+          opacity: 1;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+////////*********Portfolio***********/////////////
+.portfolio {
+  // margin-top: 6rem;
+  padding-top:4.5rem ;
+
+  .portfolio-title {
+    margin-top: 1.2rem;
+    // margin-bottom: 2rem;
+    .title {
+      position: relative;
+      text-align: center;
+      padding-bottom: 23px;
+      color: black;
+    }
+    .title::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: black;
+      transform: translateX(-50%);
+    }
+    .title::after {
+      content: "My Projects";
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      font-size: 23px;
+      color: #9907fa;
+      padding: 5px;
+      background: #ffffff;
+      transform: translateX(-50%);
+    }
+  }
+  .col {
+    .card {
+      // border: 2px solid  #faf7f7;
+      border-radius: 10px;
+      height: 220px;
+      transition: transform 0.3s linear;
+
+      margin-bottom: 10px !important;
+      .project-image {
+        height: 170px;
+      }
+
+      .project-title {
+        transition: transform 0.3s linear;
+
+        a {
+          text-decoration: none;
+          padding-top: 8px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          .project-icon {
+            width: 19px;
+            padding-right: 2px;
+          }
+          .card-title {
+            padding-top: 9px;
+            font-weight: 700;
+            color: #9907fa;
+          }
+        }
+      }
+      .project-title:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .card:hover {
+    transform: scale(1.09);
+  }
+}
+.footer {
+  border-top: 1px solid #c16afc;
+  background: #c16afc;
+  height: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1125px) {
+  ///**About *****////
+  .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .left-col {
+      .card {
+        width: 96% !important;
+        height: 70vh !important;
+        margin-top: 2rem !important;
+        .card-body {
+          font-size: 18px !important;
+          .btn {
+            letter-spacing: 0 !important;
+            font-size: 18px !important;
+            padding: 5px !important;
+            font-weight: 600 !important;
+          }
+        }
+      }
+    }
+    .right-col {
+      height: 77vh !important;
+      img {
+        height: 70vh !important;
+      }
+    }
+  }
+  ////////*Contact*/////////
+  .contact-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .contact-left-col {
+      .card {
+        width: 98% !important;
+      }
+
+      .contact-text {
+        padding-left: 40px !important;
+      }
+    }
+    .contact-right-col {
+      .contact-form {
+        .field {
+          margin-bottom: 1.2rem;
+          border: 1px solid #9907fa;
+          border-radius: 4px;
+          padding: 7px;
+          text-indent: 20px;
+          background-color: white;
+          font-size: 17px;
+          // overflow: visible;
+        }
+        .button {
+          border: none;
+          border-radius: 4px;
+          transition: ease-out 0.3s;
+          font-size: 18px;
+          background: #ffffff;
+          color: #60605e;
+          outline: none;
+          border: 2px solid #9907fa;
+          position: relative;
+          z-index: 1;
+          padding: 9px;
+        }
+        .button:hover {
+          color: #ffffff;
+          cursor: pointer;
+        }
+        .button:before {
+          position: absolute;
+          transition: 0.5s all ease;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          right: 50%;
+          content: "";
+          background-color: #9907fa;
+          opacity: 0;
+        }
+        .button:hover:before {
+          transition: 0.5s all ease;
+          left: 0;
+          right: 0;
+          opacity: 1;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  ///**About *****////
+  .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .left-col {
+      .card {
+        width: 96% !important;
+        height: 70vh !important;
+        margin-top: 2rem !important;
+        .card-body {
+          font-size: 15.5px !important;
+          .btn {
+            letter-spacing: 0 !important;
+            font-size: 15px !important;
+            padding: 5px !important;
+            font-weight: 600 !important;
+          }
+        }
+      }
+    }
+    .right-col {
+      height: 77vh !important;
+      img {
+        height: 70vh !important;
+      }
+    }
+  }
+  //////****Skills****///////
+  .skills-row {
+    margin-top: 3rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .skills-left-col {
+      .card {
+        width: 99% !important;
+      }
+      .card-body {
+        width: 99% !important;
+
+        .card-text {
+          font-size: 16px !important;
+        }
+      }
+    }
+    .skills-right-col {
+      width: 95% !important;
+      .bars {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+  ////////*Contact*/////////
+  .contact-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .contact-left-col {
+      .card {
+        width: 98% !important;
+      }
+      .contact-text {
+        padding-left: 40px !important;
+        .text {
+          opacity: 0.7;
+          font-size: 30px !important;
+        }
+      }
+      .contact-list {
+        ul {
+          li {
+            img {
+              width: 25px !important;
+              opacity: 0.7;
+            }
+
+            .card-body {
+              span {
+                font-weight: 600;
+                font-size: 16px !important;
+              }
+            }
+          }
+        }
+      }
+      .contact-text {
+        padding-left: 40px !important;
+      }
+    }
+    .contact-right-col {
+      padding-left: 20px !important;
+      .form-title {
+        opacity: 0.7;
+      }
+      .contact-form {
+        .field {
+          margin-bottom: 1.4rem !important;
+          border: 2px solid #9907fa;
+          border-radius: 4px;
+          padding: 6px !important;
+          text-indent: 20px;
+          background-color: white;
+          font-size: 15px !important;
+          overflow: visible;
+        }
+        .button {
+          padding: 8px !important;
+        }
+        .button:hover {
+          color: #ffffff !important;
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 540px) {
+  ///* Home *///
+  .home {
+    .header-wraper {
+      width: 100% !important;
+    }
+    .home-info {
+      top: 100px !important;
+    }
+    .home-title {
+      font-size: 50px !important;
+    }
+    .typed-text {
+      font-size: 30px !important;
+    }
+  }
+
+  //////****Skills****///////
+  .skills-row {
+    margin-top: 3rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .skills-left-col {
+      .card {
+        width: 99% !important;
+      }
+      .card-body {
+        width: 99% !important;
+
+        .card-text {
+          font-size: 16px !important;
+        }
+      }
+    }
+    .skills-right-col {
+      .bars {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+  ////////*Contact*/////////
+  .contact-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .contact-left-col {
+      .contact-text {
+        padding-left: 40px !important;
+        .text {
+          font-size: 30px !important;
+        }
+      }
+      .contact-list {
+        ul {
+          li {
+            img {
+              width: 25px !important;
+            }
+
+            .card-body {
+              span {
+                font-weight: 600;
+                font-size: 16px !important;
+              }
+            }
+          }
+        }
+      }
+      .contact-text {
+        padding-left: 40px !important;
+      }
+    }
+    .contact-right-col {
+      margin-left: 10px !important;
+      width: 98% !important;
+      padding-left: 20px !important;
+      .contact-form {
+        .field {
+          margin-bottom: 1.4rem !important;
+
+          padding: 6px !important;
+
+          font-size: 15px !important;
+        }
+        .button {
+          padding: 8px !important;
+        }
+        .button:hover {
+          color: #ffffff !important;
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ///**App*////
+  .navbar {
+    .navbar-brand {
+      font-size: 30px !important;
+    }
+
+    .nav-link {
+      font-size: 16px !important;
+    }
+  }
+
+  ///* Home *///
+  .home {
+    .header-wraper {
+      width: 100% !important;
+    }
+    .home-info {
+      top: 100px !important;
+    }
+    .home-title {
+      font-size: 25px !important;
+    }
+  }
+
+  ////////****ABOUT****////////
+  .row {
+    .left-col {
+      .card {
+        width: 100% !important;
+        height: 70vh !important;
+        margin-top: 2rem !important;
+        .card-body {
+          font-size: 14px !important;
+          .btn {
+            letter-spacing: 0 !important;
+            font-size: 13px !important;
+            padding: 7px !important;
+            font-weight: 600 !important;
+          }
+        }
+      }
+    }
+    .right-col {
+      height: 70vh !important;
+      img {
+        height: 70vh !important;
+      }
+    }
+  }
+  //////****Skills****///////
+  .skills-row {
+    margin-top: 3rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .skills-left-col {
+      .card {
+        // width: 100% !important;
+        .card-text {
+          font-size: 17px !important;
+        }
+      }
+    }
+    .skills-right-col {
+      .bars {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+  ////////*Contact*/////////
+  .contact-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    .contact-left-col {
+      // .card {
+      //   width: 98% !important;
+      // }
+      .contact-text {
+        padding-left: 40px !important;
+        .text {
+          font-size: 30px !important;
+        }
+      }
+      .contact-list {
+        ul {
+          li {
+            img {
+              width: 25px !important;
+            }
+
+            .card-body {
+              span {
+                font-weight: 600;
+                font-size: 16px !important;
+              }
+            }
+          }
+        }
+      }
+      .contact-text {
+        padding-left: 40px !important;
+      }
+    }
+    .contact-right-col {
+      margin-left: 10px !important;
+      width: 98% !important;
+      padding-left: 20px !important;
+      .contact-form {
+        .field {
+          margin-bottom: 1.4rem !important;
+
+          padding: 6px !important;
+
+          font-size: 15px !important;
+        }
+        .button {
+          padding: 8px !important;
+        }
+        .button:hover {
+          color: #ffffff !important;
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+}
